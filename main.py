@@ -12,6 +12,10 @@ def printit():
     print('playing sound using  playsound')
   print(screams.json())
 printit()
+
+#python3 -m venv myenv
+#source myenv/bin/activate
+
 # for playing note.wav file
 #def show():
  #   messagebox.showinfo("Test Popup", "Hello world")
