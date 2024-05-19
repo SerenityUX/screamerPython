@@ -6,9 +6,9 @@ import threading
 def printit():
   receiver = "A"
   threading.Timer(0.5, printit).start()
-  screams = requests.get('https://screamer-disbatch-e167cb5316a6.herokuapp.com/getNewScreams?receiver={receiver}')
+  screams = requests.get(f'https://screamer-disbatch-e167cb5316a6.herokuapp.com/getNewScreams?receiver={receiver}')
   if len(screams.json()["screams"]):
-    playsound('./{receiver}.mp3')
+    playsound(f'./{receiver}.mp3')
     print('playing sound using  playsound')
   print(screams.json())
 printit()
@@ -28,9 +28,13 @@ printit()
 #show_button = Button(root , text = "Show popup" , command = show)
 #show_button.place(x = 200 , y = 200)
 mainloop()
+
 main = Tk()
+photo = PhotoImage(file='/Users/hajrahsiddiqui/Documents/hackathon 2024 project /zombie image .webp')
+main.iconphoto()
 main.geometry("1000000x1000000")
 main.mainloop()
+
 #COME BACK TO WINSOUND THING
 #---
 #winsound.playsound("zombie.mp3", winsound.SND_ASYNC + winsound.SND_LOOP)
